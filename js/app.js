@@ -23,9 +23,11 @@ createApp({
   },
   methods: {
     addToDo(){
-       this.todos.push({text: this.newLi,
-                        done: false});
-       this.newLi = '';
+      if(this.newLi.length >= 5){
+        this.todos.push({text: this.newLi,
+          done: false});
+        this.newLi = '';
+      }
     },
     removeToDo(index){
       if(index){
