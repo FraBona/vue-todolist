@@ -28,7 +28,7 @@ createApp({
        this.newLi = '';
     },
     removeToDo(index){
-      if(index === index){
+      if(index){
         this.todos.splice(index, 1);
       }
     },
