@@ -4,6 +4,7 @@ createApp({
   data(){
     return{
       currentIndex: 0,
+      newLi: '',
       todos: [
         {
           text: 'Fare i compiti',
@@ -21,6 +22,10 @@ createApp({
     }
   },
   methods: {
+    addToDo(){
+       this.todos.push({text: this.newLi});
+       this.newLi = '';
+    },
     removeToDo(index){
       if(index === index){
         this.todos.splice(index, 1);
