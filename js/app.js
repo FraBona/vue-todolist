@@ -20,6 +20,13 @@ createApp({
       ]
     }
   },
+  methods: {
+    removeToDo(index){
+      if(index === index){
+        this.todos.splice(index, 1);
+      }
+    }
+  },
   mounted() {
   }
 }).mount('#app');
