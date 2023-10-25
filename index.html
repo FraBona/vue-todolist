@@ -16,7 +16,7 @@
     </div>
     <div>
       <ul>
-        <li  v-for = "(todo, index) in todos" :class = "todo.done === true ? 'underline' : ''">
+        <li  v-for = "(todo, index) in todos" :class = "todo.done === true ? 'underline' : ''" @click = "checkToDo(todo)">
           {{todo.text}}
           <i class="fa-solid fa-xmark" @click = "removeToDo(index)"></i>
         </li>

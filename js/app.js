@@ -23,12 +23,21 @@ createApp({
   },
   methods: {
     addToDo(){
-       this.todos.push({text: this.newLi});
+       this.todos.push({text: this.newLi,
+                        done: false});
        this.newLi = '';
     },
     removeToDo(index){
       if(index === index){
         this.todos.splice(index, 1);
+      }
+    },
+    checkToDo(todo){
+      if(todo.done === true){
+        todo.done = false;
+      }
+      else{
+        todo.done = true;
       }
     }
   },
